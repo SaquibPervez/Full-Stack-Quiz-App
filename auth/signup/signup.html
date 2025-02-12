@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signup</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <div class="form">
+        <h3>signup</h3>
+
+        <label for="firstname">First Name</label>
+        <input type="text" placeholder="Enter First Name" id="firstname" required>
+
+        <label for="lastname">Last Name</label>
+        <input type="text" placeholder="Enter Last Name" id="lastname" required>
+        
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter Email" id="email" required>
+        
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter Password" id="password" required>
+        
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" placeholder="Confirm Password" id="confirmpassword" required>
+        
+        <button onclick="Signup()">Sign Up</button>
+        <div class="social">
+            <p class="message">Already Registered? <a href="/index.html">Login</a></p>
+            
+        </div>
+    </div>
+    
+</body>
+<script type="module" src="./signup.js"></script>
+</html>

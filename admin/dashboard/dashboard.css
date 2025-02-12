@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3498db;
+    padding: 12px 20px;
+    gap: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease, transform 0.2s;
+}
+
+.navbar a:hover {
+    color: #f0a500;
+    transform: scale(1.1);
+}
+
+.icon {
+    font-size: 20px;
+}
+
+/* Dropdown Styling */
+.dropdown-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#quizDropdown {
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#quizDropdown:hover {
+    border-color: #f0a500;
+}
+
+/* Table Styling */
+#mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: lightblue; */
+}
+
+#mainContent table {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 900px;
+    border-collapse: collapse;
+    background: black;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* background-color: lightblue; */
+}
+#mainContent table td{
+    background: black;
+}
+#mainContent table th,
+#mainContent table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    /* font-weight: 600; */
+}
+
+#mainContent table th {
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+}
+
+#mainContent table td {
+    background-color: #f9f9f9;
+    transition: background 0.3s ease;
+}
+
+#mainContent table tr:hover td {
+    background-color: #f0e6cc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    #mainContent table {
+        width: 95%;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    #quizDropdown {
+        width: 80%;
+        text-align: center;
+    }
+}

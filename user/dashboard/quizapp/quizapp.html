@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Attempt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="quizapp.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../dashboard.html"><i class="fas fa-tachometer-alt icon"></i> Dashboard</a>
+        <a href="/user/scorelist/scorelist.html"><i class="fas fa-chart-bar icon"></i> Score</a>
+        <a href="#"><i class="fas fa-user icon"></i> Profile</a>
+        <button onclick="logout()">Logout</button>
+    </nav>
+
+    <div class="container" id="quizContainer">
+
+        <div class="header">
+            <h1 id="questionElement">WHAT IS YOUR NAME?</h1>
+        </div>
+        <div class="body">
+            <ul id="optionElement">
+                <!-- <li>SAYLANI</li>
+                <li>MASS</li>
+                <li>IT</li>
+                <li>TRAINING</li> -->
+            </ul>
+        </div>
+        <div class="footer">
+            <p> <span id="currentQuesCount">1</span> / <span id="totalCount"></span> </p>
+            <button onclick="nextQues()" id="nextBtn">Next</button>
+        </div>
+    </div>
+    
+        <div id="resultContainer">
+
+            <ul id="scores" >
+                <li  >Quiz Name:</li>
+                <li>Score:</li>
+                <li>Wrong ans:</li>
+                <li>Total Ques:</li>
+                <li>Percentage</li>
+            </ul>
+            <button id="btn">Dashboard
+            </button>
+        </div>
+    
+</body>
+<script type="module" > 
+    import {authUserCheck} from "../../utils/utils.js"
+    authUserCheck()
+</script>
+<script type="module" src="quizapp.js"></script>
+</html>

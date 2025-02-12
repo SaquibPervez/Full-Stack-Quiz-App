@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../dashboard/dashboard.html"><i class="fas fa-tachometer-alt icon"></i> Dashboard</a>
+        <a href="/user/scorelist/scorelist.html"><i class="fas fa-chart-bar icon"></i> Score</a>
+        <!-- <a href="#"><i class="fas fa-user icon"></i> Profile</a> -->
+        <button onclick="logout()">Logout</button>
+    </nav>
+    <h1>Quiz Listing</h1>
+
+<div id="container">
+    <!-- <div class="quiz-card">
+        <h3 class="quiz-title">General Knowledge Quiz</h3>
+        <p class="quiz-description">Test your knowledge with a series of questions on general topics.</p>
+        <button class="quiz-status-btn active" onclick="toggleStatus(this)">Active</button>
+    </div> -->
+
+    <!-- <div class="quiz-card">
+        <h3 class="quiz-title">General Knowledge Quiz</h3>
+        <p class="quiz-description">Test your knowledge with a series of questions on general topics.</p>
+        <button class="quiz-status-btn active" onclick="toggleStatus(this)">Active</button>
+    </div>
+
+    <div class="quiz-card">
+        <h3 class="quiz-title">General Knowledge Quiz</h3>
+        <p class="quiz-description">Test your knowledge with a series of questions on general topics.</p>
+        <button class="quiz-status-btn active" onclick="toggleStatus(this)">Active</button>
+    </div>
+
+    <div class="quiz-card">
+        <h3 class="quiz-title">General Knowledge Quiz</h3>
+        <p class="quiz-description">Test your knowledge with a series of questions on general topics.</p>
+        <button class="quiz-status-btn active" onclick="toggleStatus(this)">Active</button>
+    </div> -->
+</div>
+</body>
+<script type="module">
+    import { authUserCheck } from "../../utils/utils.js"
+    authUserCheck()
+</script>
+<script type="module" src="./dashboard.js"></script>
+</html>
+
+

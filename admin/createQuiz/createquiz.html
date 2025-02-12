@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="createquiz.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../dashboard/dashboard.html"><i class="fas fa-home icon"></i> Home</a>
+        <a href="../createQuiz/createquiz.html"><i class="fas fa-plus-circle icon"></i> Create Quiz</a>
+        <a href="../quizlist/quizlist.html"><i class="fas fa-list icon"></i> Quiz Listing</a>
+    </div>
+    <a href="../../index.html">Logout</a>
+</div>
+        
+    </nav>
+    <div class="container">
+        <h1>Create Quiz</h1>
+
+        <div>
+            <!-- Quiz Title Section -->
+            <div class="form-group">
+                <label for="quizTitle">Title</label>
+                <input type="text" id="quizTitle" name="quizTitle" placeholder="Enter Quiz Title" required>
+            </div>
+
+            <!-- Quiz Category Section -->
+            <div class="form-group">
+                <label for="quizCategory">Category</label>
+                <input type="text" id="quizCategory" name="quizCategory" placeholder="Enter Quiz Category" required>
+            </div>
+
+            <!-- Question Creation Section -->
+            <div class="form-group">
+
+                <!-- Question Text -->
+                <label for="questionText">Question Text</label>
+                <input type="text" id="questionText" name="questionText" placeholder="Enter Question Text" required>
+
+                <!-- Options -->
+                <label for="option1">Option 1</label>
+                <input type="text" id="option1" name="option1" placeholder="Option 1" required>
+
+                <label for="option2">Option 2</label>
+                <input type="text" id="option2" name="option2" placeholder="Option 2" required>
+
+                <label for="option3">Option 3</label>
+                <input type="text" id="option3" name="option3" placeholder="Option 3" required>
+
+                <label for="option4">Option 4</label>
+                <input type="text" id="option4" name="option4" placeholder="Option 4" required>
+
+                <!-- Correct Answer -->
+                <label for="correctAnswer">Correct Answer</label>
+                <input type="text" id="correctAnswer" name="correctAnswer" placeholder="Enter Correct Answer" required>
+                <button id="AddQuestions" onclick="AddQuestions()">Add Question</button>
+            </div>
+
+            <!-- Submit Button -->
+            <button onclick="CreateQuiz()" class="submit-btn">Create Quiz</button>
+        </div>
+    </div>
+
+</body>
+<!-- <script type="module">
+   
+    import { authAdminCheck } from "../../utils/utils.js"
+    authAdminCheck()
+</script> -->
+<script type="module" src="./createquiz.js"></script>
+</html>
