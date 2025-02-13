@@ -9,11 +9,21 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="../dashboard/dashboard.html"><i class="fas fa-tachometer-alt icon"></i> Dashboard</a>
-        <a href="/user/scorelist/scorelist.html"><i class="fas fa-chart-bar icon"></i> Score</a>
-        <!-- <a href="#"><i class="fas fa-user icon"></i> Profile</a> -->
+        <a href="../dashboard/dashboard.html">
+            <i class="fas fa-tachometer-alt icon"></i> Dashboard
+        </a>
+        <a href="/user/scorelist/scorelist.html">
+            <i class="fas fa-chart-bar icon"></i> Score
+        </a>
+        <a href="/user/Profile/profile.html">
+            <i class="fas fa-user icon"></i> Profile
+        </a>
+        <div class="profile-container">
+            <img id="profileImage" class="profile-img" src="" alt="Profile">
+        </div>
         <button onclick="logout()">Logout</button>
     </nav>
+    
     <h1>Quiz Listing</h1>
 
 <div id="container">
@@ -44,7 +54,7 @@
 </body>
 <script type="module">
     import { authUserCheck } from "../../utils/utils.js"
-    authUserCheck()
+    // authUserCheck()
 </script>
 <script type="module" src="./dashboard.js"></script>
 </html>

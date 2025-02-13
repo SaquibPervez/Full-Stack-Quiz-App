@@ -2,7 +2,7 @@ const authCheck = () => {
     const user = localStorage.getItem("user");
 
     if (!user) {
-        window.location.replace('../index.html');
+        window.location.replace('/index.html');
         return;
     }
 };
@@ -11,7 +11,7 @@ const authUserCheck = () => {
     const user = localStorage.getItem("user");
 
     if (!user) {
-        window.location.replace('../../index.html');
+        window.location.replace('/index.html');
         return;
     }
 
@@ -26,7 +26,7 @@ const authAdminCheck = () => {
     const user = localStorage.getItem("user");
 
     if (!user) {
-        window.location.replace('../index.html');
+        window.location.replace('/index.html');
         return;
     }
 

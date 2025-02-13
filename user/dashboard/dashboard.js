@@ -1,4 +1,4 @@
-import { collection, doc ,db,  getDocs } from "../../firebase.js"
+import { collection, doc ,db,  getDocs,getDoc } from "../../firebase.js"
 
 const container = document.getElementById("container")
 
@@ -19,7 +19,6 @@ const quizlisting = async () => {
                 <button id = ${doc.id} class="quiz-status-btn active" onclick="navigate(this)">Start Quiz</button>
             </div>`
             }
-
             
         })
 
@@ -39,7 +38,39 @@ function logout() {
     window.location.href = "../../../index.html";  
 }
 
+const getImage = async () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (!user || !user.uid) {
+        console.error("User not found in localStorage or missing UID");
+        return;
+    }
+
+    const uid = user.uid;
+    console.log("User UID:", uid);
+
+    try {
+        const userDoc = await getDoc(doc(db, "users", uid));
+        
+        if (userDoc.exists()) {
+            const userData = userDoc.data();
+            console.log("User Data:", userData);
+            console.log("image:", userDoc.data().imageURL);
+
+            if (userData.imageURL) {
+                const profileImage = document.getElementById("profileImage");
+                
+                if (profileImage) {
+                    profileImage.src = userDoc.data().imageURL;
+                }
+            } 
+        } 
+    } catch (error) {
+        console.error(error.message);
+    }
+};
 window.addEventListener("load", quizlisting)
+window.addEventListener("load", getImage)
 
 window.quizlisting = quizlisting
 window.navigate = navigate
