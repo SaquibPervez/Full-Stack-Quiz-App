@@ -7,53 +7,70 @@
 
 body {
     background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
 }
 
 h1 {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.5rem;
-    color: #333;
 }
 
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; 
     align-items: center;
     background-color: #333;
-    padding: 15px;
-    gap: 40px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    margin: 0 15px;
+}
+
+.navbar button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.profile-container {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: color 0.3s ease;
+    align-items: center; 
+    margin-left: auto; 
 }
 
-.navbar a:hover {
-    color: #f0a500;
-}
-
-.icon {
-    font-size: 1.2rem;
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    margin-right: 10px; 
 }
 
 .container {
     width: 150px;
     text-align: center;
-    /* text-decoration: underline; */
     margin: 10px auto;
     font-size: 1.1rem;
     color: #555;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
 }
 
 .btn {
@@ -66,15 +83,18 @@ h1 {
     font-size: 1rem;
     color: #333;
     transition: background-color 0.3s ease;
+    display: flex; 
+    align-items: center; 
+    margin-top: 10px;
 }
 
-.btn:hover {
-    background-color: #4da6ff;
+.btn i {
+    margin-right: 5px; 
 }
 
 #container {
     border: 1px solid #ccc;
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     margin: 20px auto;
@@ -89,7 +109,7 @@ h1 {
     margin: auto;
 }
 
-.profile-img {
+.profile-img1{
     width: 100px;
     height: 100px;
     border-radius: 50%;

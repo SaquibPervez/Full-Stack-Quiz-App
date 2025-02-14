@@ -69,6 +69,7 @@ const getImage = async () => {
         console.error(error.message);
     }
 };
+export{getImage}
 window.addEventListener("load", quizlisting)
 window.addEventListener("load", getImage)
 

@@ -14,22 +14,32 @@ const getdata =async () => {
     console.log(data.data());
 
 
-        Profiledata.innerHTML = `<div id= "container">
+    Profiledata.innerHTML = `
+    <div id="container">
         <div class="profile-container">
-            <img id="profileImage" class="profile-img" src="" alt="Profile">
+            <img id="profileImage" class="profile-img1" src="${data.data().imageURL}" alt="Profile">
         </div>
-                <h2 class="container">First Name:</h2>
-                <h2>${data.data().firstname}</h2>   
-                <button class="btn" onclick="editFname()">Edit</button>
+        <div class="profile-info">
+            <h2 class="container">First Name:</h2>
+            <h2>${data.data().firstname}</h2>
+            <button class="btn" onclick="editFname()">
+                <i class="fas fa-edit"></i> Edit
+            </button>
 
-                <h2 class="container">Last Name:</h2>
-                <h2>${data.data().lastname}</h2>
-                <button class="btn" onclick="editLname()">Edit</button>
+            <h2 class="container">Last Name:</h2>
+            <h2>${data.data().lastname}</h2>
+            <button class="btn" onclick="editLname()">
+                <i class="fas fa-edit"></i> Edit
+            </button>
 
-                <h2 class="container">Email:</h2>
-                <h2>${data.data().email}</h2>
-                <button class="btn" onclick="editemail()">Edit</button>`
-
+            <h2 class="container">Email:</h2>
+            <h2>${data.data().email}</h2>
+            <button class="btn" onclick="editemail()">
+                <i class="fas fa-edit"></i> Edit
+            </button>
+        </div>
+    </div>
+`;
     } catch (error) {
         console.log(error.message)
     }
@@ -72,6 +82,7 @@ const editLname = async () => {
         console.error("Failed to update Last Name:", error.message);
     }
 };
+
 const editemail = async () => {
 
     const user = JSON.parse(localStorage.getItem("user"))
@@ -121,9 +132,13 @@ const getImage = async () => {
         console.error(error.message);
     }
 };
-
+function logout() {
+    localStorage.clear();  
+    window.location.href = "../../../index.html";  
+}
 window.getdata = getdata
 window.addEventListener("load", getImage)
 window.editFname = editFname
 window.editLname = editLname
 window.editemail = editemail
+window.logout = logout

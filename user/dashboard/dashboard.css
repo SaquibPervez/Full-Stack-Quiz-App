@@ -4,20 +4,29 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 body {
     background-color: #f4f4f4;
 }
-h1{
+
+h1 {
     text-align: center;
     margin-top: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; 
     align-items: center;
     background-color: #333;
     padding: 10px 20px;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .navbar a {
@@ -36,7 +45,9 @@ h1{
 }
 
 .profile-container {
-    margin-left: auto;
+    display: flex;
+    align-items: center; 
+    margin-left: auto; 
 }
 
 .profile-img {
@@ -45,8 +56,8 @@ h1{
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid white;
+    margin-right: 10px; 
 }
-
 
 .quiz-card {
     background-color: #fff;
